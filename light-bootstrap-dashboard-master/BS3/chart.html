@@ -73,18 +73,28 @@
             </div>
 
             <ul class="nav">
-                <li class="active">
-                    <a href="chart.html">
-                        <i class="pe-7s-graph"></i>
-                        <p>Chart</p>
+
+                <li>
+                    <a href="dashboard.html">
+                        <i class="pe-7s-bell"></i>
+                        <p>Dashboard</p>
                     </a>
                 </li>
+
                 <li>
                     <a href="Main.html">
                         <i class="pe-7s-user"></i>
                         <p>Main</p>
                     </a>
                 </li>
+
+                <li class="active">
+                    <a href="chart.html">
+                        <i class="pe-7s-graph"></i>
+                        <p>Chart</p>
+                    </a>
+                </li>
+                
                 <li>
                     <a href="logs.html">
                         <i class="pe-7s-note2"></i>
@@ -104,12 +114,7 @@
                     </a>
                 </li>
               
-                <li>
-                    <a href="dashboard.html">
-                        <i class="pe-7s-bell"></i>
-                        <p>Dashboard</p>
-                    </a>
-                </li>
+                
 				
             </ul>
     	</div>
@@ -152,10 +157,10 @@
         <div class="content">
             <div class="container-fluid">
                 <div class="row">
-                    <div class="col-md-4">
+                    <!--<div class="col-md-4">
                         <div class="card">
                             <div class="header">
-                                <h4 class="title">Cảm biến độ ẩm</h4>                               
+                                <h4 class="title">Cảm biến ánh sáng</h4>                               
                             </div>
                             <div class="content">
                                 <canvas id="labelChart"></canvas>
@@ -172,7 +177,7 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div>-->
 
                     <div class="col-md-8">
                         <div class="card">
@@ -198,15 +203,15 @@
                     <div class="col-md-6">
                         <div class="card ">
                             <div class="header">
-                                <h4 class="title">Cảm biến nhiệt độ</h4>
+                                <h4 class="title">Cảm biến nhiệt độ,độ ẩm</h4>
                             </div>
                             <div class="content">
                                 <div id="chartActivity" class="ct-chart"></div>
 
                                 <div class="footer">
                                     <div class="legend">
-                                        <i class="fa fa-circle text-info"></i> Tesla Model S
-                                        <i class="fa fa-circle text-danger"></i> BMW 5 Series
+                                        <i class="fa fa-circle text-info"></i> Nhiệt độ
+                                        <i class="fa fa-circle text-danger"></i> Độ ẩm
                                     </div>
                                     <hr>
                                     <div class="stats">
