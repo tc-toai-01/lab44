@@ -24,53 +24,6 @@
     <!--  CSS for Demo Purpose, don't include it in your project     -->
     <link href="assets/css/demo.css" rel="stylesheet" />
 
-    <style>
-        .toggle {
-  --width: 75px;
-  --height: calc(var(--width) /2);
-  --border-radius: calc(var(--height) / 2);
-
-  display: inline-block;
-  cursor: pointer;
-}
-
-.toggle__input {
-  display: none;
-}
-
-.toggle__fill {
-  position: relative;
-  width: var(--width);
-  height: var(--height);
-  border-radius: var(--border-radius);
-  background: #dddddd;
-  transition: background 0.2s;
-}
-
-.toggle__input:checked ~ .toggle__fill {
-  background: #3d4ba6;
-}
-
-.toggle__fill::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: var(--height);
-  width: var(--height);
-  background: #ffffff;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
-  border-radius: var(--border-radius);
-  transition: transform 0.2s;
-}
-
-.toggle__input:checked ~ .toggle__fill::after {
-  transform: translateX(var(--height));
-}
-
-    </style>
-
-
     <!--     Fonts and icons     -->
     <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
     <link href='http://fonts.googleapis.com/css?family=Roboto:400,700,300' rel='stylesheet' type='text/css'>
@@ -119,21 +72,7 @@
                         <p>Logs</p>
                     </a>
                 </li>
-                <!--<li>
-                    <a href="typography.html">
-                        <i class="pe-7s-news-paper"></i>
-                        <p>Typography</p>
-                    </a>
-                </li> -->   
-                <li>
-                    <a href="icons.html">
-                        <i class="pe-7s-science"></i>
-                        <p>Icons</p>
-                    </a>
-                </li>
-              
-                
-				
+
             </ul>
     	</div>
     </div>
@@ -148,40 +87,10 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="#">User</a>
+                    <a class="navbar-brand" href="#">Main</a>
                 </div>
                 <div class="collapse navbar-collapse">
                     <ul class="nav navbar-nav navbar-left">
-                        <li>
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                                <i class="fa fa-dashboard"></i>
-								<p class="hidden-lg hidden-md">Dashboard</p>
-                            </a>
-                        </li>
-                        <li class="dropdown">
-                              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                                    <i class="fa fa-globe"></i>
-                                    <b class="caret hidden-sm hidden-xs"></b>
-                                    <span class="notification hidden-sm hidden-xs">5</span>
-									<p class="hidden-lg hidden-md">
-										5 Notifications
-										<b class="caret"></b>
-									</p>
-                              </a>
-                              <ul class="dropdown-menu">
-                                <li><a href="#">Notification 1</a></li>
-                                <li><a href="#">Notification 2</a></li>
-                                <li><a href="#">Notification 3</a></li>
-                                <li><a href="#">Notification 4</a></li>
-                                <li><a href="#">Another notification</a></li>
-                              </ul>
-                        </li>
-                        <li>
-                           <a href="">
-                                <i class="fa fa-search"></i>
-								<p class="hidden-lg hidden-md">Search</p>
-                            </a>
-                        </li>
                     </ul>
 
                     <ul class="nav navbar-nav navbar-right">
