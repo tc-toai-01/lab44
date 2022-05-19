@@ -68,7 +68,7 @@
     	<div class="sidebar-wrapper">
             <div class="logo">
                 <a class="simple-text">
-                    Lab 4  - Gr10
+                    Lab 4 IoTs  - Gr10
                 </a>
             </div>
 
@@ -101,12 +101,7 @@
                         <p>Logs</p>
                     </a>
                 </li>
-                <!--<li>
-                    <a href="typography.html">
-                        <i class="pe-7s-news-paper"></i>
-                        <p>Typography</p>
-                    </a>
-                </li> -->   
+             
                 <li>
                     <a href="icons.html">
                         <i class="pe-7s-science"></i>
@@ -157,24 +152,9 @@
         <div class="content">
             <div class="container-fluid">
                 <div class="row">
-                    <<div class="col-md-4">
-                        <div class="card">
-                            <div class="header">
-                                <h4 class="title">Cảm biến Độ ẩm</h4>                               
-                            </div>
-                            <div class="content">
-                                <canvas id="doughnutChart"></canvas>
-                                <div class="footer">                                   
-                                    <hr>
-                                    <div class="stats">
-                                        <i class="fa fa-clock-o"></i> Campaign sent 2 days ago
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>>
+                    
 
-                    <div class="col-md-8">
+                    <div class="col-md-6">
                         <div class="card">
                             <div class="header">
                                 <h4 class="title">Cảm biến ánh sáng</h4>                            
@@ -190,31 +170,32 @@
                             </div>
                         </div>
                     </div>
-                </div>
-
-
-
-                <div class="row">
-                    <div class="col-md-6">
-                        <div class="card ">
-                            <div class="header">
-                                <h4 class="title">Cảm biến nhiệt độ</h4>
-                            </div>
-                            <div class="content">
-                                <canvas id="barChart"></canvas>
-
-                                <div class="footer">                                    
-                                    <hr>
-                                    <div class="stats">
-                                        <i class="fa fa-check"></i> Data information certified
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="card ">
+                                <div class="header">
+                                    <h4 class="title">Cảm biến nhiệt độ, độ ẩm</h4>
+                                </div>
+                                <div class="content">
+                                    <canvas id="barChart"></canvas>
+    
+                                    <div class="footer">                                    
+                                        <hr>
+                                        <div class="stats">
+                                            <i class="fa fa-check"></i> Data information certified
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
+    
+                        
                     </div>
-
-                    
                 </div>
+
+
+
+                
             </div>
         </div>
 
@@ -329,22 +310,51 @@
         data: {
             labels: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
             datasets: [{
+            label: 'Nhiệt độ',
             data: [12, 19, 3, 5, 2, 3, 10],
             backgroundColor: [
                 'rgba(255, 99, 132, 0.2)',
-                'rgba(54, 162, 235, 0.2)',
-                'rgba(255, 206, 86, 0.2)',
-                'rgba(75, 192, 192, 0.2)',
-                'rgba(153, 102, 255, 0.2)',
-                'rgba(255, 159, 64, 0.2)'
+                'rgba(255, 99, 132, 0.2)',
+                'rgba(255, 99, 132, 0.2)',
+                'rgba(255, 99, 132, 0.2)',
+                'rgba(255, 99, 132, 0.2)',
+                'rgba(255, 99, 132, 0.2)',
+                'rgba(255, 99, 132, 0.2)'
+                
             ],
             borderColor: [
                 'rgba(255,99,132,1)',
-                'rgba(54, 162, 235, 1)',
-                'rgba(255, 206, 86, 1)',
-                'rgba(75, 192, 192, 1)',
-                'rgba(153, 102, 255, 1)',
-                'rgba(255, 159, 64, 1)'
+                'rgba(255,99,132,1)',
+                'rgba(255,99,132,1)',
+                'rgba(255,99,132,1)',
+                'rgba(255,99,132,1)',
+                'rgba(255,99,132,1)',
+                'rgba(255,99,132,1)'
+               
+            ],
+            borderWidth: 1
+            },{
+            label: 'Độ ẩm',
+            data: [15, 10, 8, 10, 6, 17, 19],
+            backgroundColor: [
+                'rgba(2, 99, 132, 0.2)',
+                'rgba(2, 99, 132, 0.2)',
+                'rgba(2, 99, 132, 0.2)',
+                'rgba(2, 99, 132, 0.2)',
+                'rgba(2, 99, 132, 0.2)',
+                'rgba(2, 99, 132, 0.2)',
+                'rgba(2, 99, 132, 0.2)'
+                
+            ],
+            borderColor: [
+                'rgba(2,99,132,1)',
+                'rgba(2,99,132,1)',
+                'rgba(2,99,132,1)',
+                'rgba(2,99,132,1)',
+                'rgba(2,99,132,1)',
+                'rgba(2,99,132,1)',
+                'rgba(2,99,132,1)'
+                
             ],
             borderWidth: 1
             }]
