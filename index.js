@@ -1,17 +1,29 @@
 const mqtt = require("mqtt");
 const { stringify } = require("nodemon/lib/utils");
 
-const Express = require("express");
+const express = require("express");
 const BodyParser = require("body-parser");
 const MongoClient = require("mongodb").MongoClient;
 const ObjectId = require("mongodb").ObjectID;
 const mongoose = require('mongoose');
 
-const CONNECTION_URL = "";
-const DATABASE_NAME = "";
-const COLLECTION = "";
-const COLLECTION1 = "/" + COLLECTION; 
-const PORT = "3000";
+const http = require('http');
+const dotenv = require('dotenv');
+const path = require('path');
+const ejs = require('ejs');
+const server = http.createServer(app);
+require('dotenv').config()
+
+const DBConnect = require('./mongoConnect');
+const connect = new DBConnect(process.env.DBUser,process.env.DBPassword);
+const mongoose = require("mongoose");
+const Data = require('./models/data');
+
+app.set('view engine','ejs');
+app.set('views',path.join(__dirname,'views'));
+app.use(express.urlencoded({extended:true}));
+app.use(express.static(__dirname + '/public'));
+app.use(express.json());
 
 const broker = "mqtt:broker.hivemq.com:1883";
 const client = mqtt.connect(broker);
@@ -45,11 +57,10 @@ client.on("message", (topic,  message) => {
 
 
 // Tạo kết nối đến MongoDB
-var app = Express();
+var app = express();
 app.use(BodyParser.json());
 app.use(BodyParser.urlencoded({ extended: true}));
 
-Data = require('./models/data')
 
 mongoose.connect(CONNECTION_URL)
 var db = mongoose.connection;
@@ -87,6 +98,3 @@ app.post('/api/data', function(req, res){
 
 app.listen(PORT);
 console.log('Running on port ' + PORT);
-
-
-

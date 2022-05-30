@@ -1,26 +1,25 @@
 var mongoose =  require('mongoose');
 
-var dataSchema = mongoose.Schema({
-    temperature: {
-        type: Number,
+var dataSchema = new mongoose.Schema({
+    ip: {
+        type: String,
     },
 
-    humidity: {
-        type: Number,
+    name: {
+        type: String,
     },
 
-    lux: {
-        type: Number,
+    sensor: {
+        type:String,
     },
 
-    date: {
-        type: Date,
-        default: Date.now,
-        required: true,
+    value: {
+        type: String,
     }
-});
+},{timestamps:true})
 
-var Data = module.exports = mongoose.model('Data', dataSchema);
+const data = mongoose.model("Data",dataSchema);
+module.exports = data;
 
 // GET DATAs
 
@@ -34,6 +33,6 @@ module.exports.getData = function(id, callback){
 }
 
 // POST DATA
-module.exports.addData = function(book, callback){
-    Data.create(book, callback);
+module.exports.addData = function(data, callback){
+    Data.create(data, callback);
 }
