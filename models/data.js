@@ -18,8 +18,7 @@ var dataSchema = new mongoose.Schema({
     }
 },{timestamps:true})
 
-const data = mongoose.model("Data",dataSchema);
-module.exports = data;
+const Data = module.exports = mongoose.model('Data', bookSchema);
 
 // GET DATAs
 
