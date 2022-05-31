@@ -96,7 +96,25 @@ app.post('/api/data', function(req, res){
   })
 })
 
-// SEARCH ANY FIELD
+// Export từ collection
+//const getDocuments = function(db, callback) {
+//  const query = { }; // Query from frontend
+//  db.collection("inCollection")
+//    .find(query)
+//    .toArray(function(err, result) { 
+//        if (err) throw err; 
+//        callback(result); 
+//  }); 
+//};
+
+// Export json
+//try {
+//  fs.writeFileSync('out_file.json', JSON.stringify(docs));
+//  console.log('Done writing to file.');
+//}
+//catch(err) {
+//  console.log('Error writing to file', err)
+//}
 
 
 // Stacktrace & no stacktrace produced
