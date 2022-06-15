@@ -10,7 +10,7 @@ var dataSchema = new mongoose.Schema({
     },
 
     sensor: {
-        type:String,
+        type: String,
     },
 
     value: {
@@ -21,7 +21,6 @@ var dataSchema = new mongoose.Schema({
 const Data = module.exports = mongoose.model('Data', bookSchema);
 
 // GET DATAs
-
 module.exports.getDatas = function(callback, limit){
     Data.find(callback).limit(limit);
 }

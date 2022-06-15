@@ -82,7 +82,7 @@ app.get('/api/data/:_id', function(req, res){
     	throw err;
     }
     res.json(data);
-  })
+  }) 
 })
 
 // POST DATA
@@ -96,9 +96,14 @@ app.post('/api/data', function(req, res){
   })
 })
 
-// Export từ collection
+// Index
+
+// Search any field
+
+
+// Export từ collection, searchquery là query từ thanh search
 //const getDocuments = function(db, callback) {
-//  const query = { }; // Query from frontend
+//  const query = {searchquery};
 //  db.collection("inCollection")
 //    .find(query)
 //    .toArray(function(err, result) { 
@@ -107,14 +112,16 @@ app.post('/api/data', function(req, res){
 //  }); 
 //};
 
-// Export json
-//try {
-//  fs.writeFileSync('out_file.json', JSON.stringify(docs));
-//  console.log('Done writing to file.');
-//}
-//catch(err) {
-//  console.log('Error writing to file', err)
-//}
+// Export json from same query
+//getDocuments(db, function(exportfile) {
+//  try {
+//      fs.writeFileSync('out_file.json', JSON.stringify(exportfile));
+//      console.log('Done writing to file.');
+//  }
+//  catch(err) {
+//      console.log('Error writing to file', err)
+//  }
+//});
 
 
 // Stacktrace & no stacktrace produced
